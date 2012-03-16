@@ -1,9 +1,10 @@
-%label{:class => "label"}= t("activerecord.attributes.demo.description", :default => t("activerecord.labels.description", :default => "Description")) + ":"
-%p= @demo.description
 %label{:class => "label"}= t("activerecord.attributes.demo.author", :default => t("activerecord.labels.author", :default => "Author")) + ":"
 %p= @demo.author
 %label{:class => "label"}= t("activerecord.attributes.demo.link", :default => t("activerecord.labels.link", :default => "Link")) + ":"
 %p= @demo.link
+%label{:class => "label"}= t("activerecord.attributes.demo.description", :default => t("activerecord.labels.description", :default => "Description")) + ":"
+%p= @demo.description
+
 
 .form-actions
   = link_to "Back", demos_path, :class => 'btn'

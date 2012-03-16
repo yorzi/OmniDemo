@@ -46,9 +46,10 @@
                     %li= link_to "Link3", "/path3"
 
     #footer
-      %b #{link_to "OmniDemo", "github.com/yorzi/OmniDemo"}. 2012.
-      %p By #{link_to "Andy Wang", "github.com/yorzi"}. Follow us on #{link_to "GitHub", "github.com"}
+      %b #{link_to "OmniDemo", "http://github.com/yorzi/OmniDemo"}. 2012.
+      %p By #{link_to "Andy Wang", "http://github.com/yorzi"}. Follow us on #{link_to "GitHub", "http://github.com"}
       
+    // add page view for registered demos via ajax
     =link_to "", add_page_view_demo_path(:link => request.path), :remote => true, :method => :put, :id => "add_page_view"
 
     = javascript_include_tag "application"
