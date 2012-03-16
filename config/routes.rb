@@ -5,6 +5,8 @@ OmniDemo::Application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
   resources :demos
+  put "demo/add_page_view", :to => "demos#add_page_view", :as => "add_page_view_demo"
+  
   resources :sessions, :only => [:create]
   
   namespace "charts" do

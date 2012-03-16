@@ -80,4 +80,13 @@ class DemosController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def add_page_view
+    @demo = Demo.find_by_link(params[:link])
+    if @demo
+      @demo.page_view = @demo.page_view.to_i + 1
+      @demo.save
+    end
+    render :text => "", :status => 200
+  end
 end
