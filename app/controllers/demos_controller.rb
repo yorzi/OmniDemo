@@ -1,6 +1,6 @@
 class DemosController < ApplicationController
-  # GET /demos
-  # GET /demos.json
+  before_filter :authorize, only: [:edit, :update, :new, :create, :destroy]
+  
   def index
     @demos = Demo.all
 
