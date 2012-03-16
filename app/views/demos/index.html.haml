@@ -16,7 +16,7 @@
         %td= demo.id
         %td= link_to demo.author, "https://github.com/#{demo.author}", :target => "_blank"
         %td= link_to demo.description, demo.link || "#", :target => "_blank"
-        %td= demo.page_view
+        %td= demo.page_view.to_i
         %td= demo.created_at
         - if current_user
           %td
