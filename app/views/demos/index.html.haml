@@ -3,7 +3,7 @@
   %thead
     %tr
       %th ID
-      %td Author
+      %th Author
       %th
         = t("activerecord.attributes.demo.description", :default => t("activerecord.labels.description", :default => "Description"))
       %th Created at
@@ -12,8 +12,8 @@
     - @demos.each do |demo|
       %tr
         %td= demo.id
-        %td= demo.author
-        %td= link_to demo.description, demo.link || "#"
+        %td= link_to demo.author, "https://github.com/#{demo.author}", :target => "_blank"
+        %td= link_to demo.description, demo.link || "#", :target => "_blank"
         %td= demo.created_at
         %td
           = link_to "Edit", edit_demo_path(demo)
