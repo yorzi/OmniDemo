@@ -44,7 +44,7 @@ class DemosController < ApplicationController
 
     respond_to do |format|
       if @demo.save
-        format.html { redirect_to @demo, notice: 'Demo was successfully created.' }
+        format.html { redirect_to demos_path, notice: 'Demo was successfully created.' }
         format.json { render json: @demo, status: :created, location: @demo }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class DemosController < ApplicationController
 
     respond_to do |format|
       if @demo.update_attributes(params[:demo])
-        format.html { redirect_to @demo, notice: 'Demo was successfully updated.' }
+        format.html { redirect_to demos_path, notice: 'Demo was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

@@ -10,4 +10,13 @@ OmniDemo::Application.routes.draw do
   namespace "charts" do
     resources :tetris_bar, :only => [:index]
   end
+  
+  namespace "exports" do
+    resources :generate_csv, :only => [:index] do
+      collection do
+        get "export"
+      end
+    end
+  end
+  
 end

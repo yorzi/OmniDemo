@@ -1,0 +1,16 @@
+%h1 Data List
+%table{:class => "table table-striped"}
+  %thead
+    %tr
+      %th Author
+      %th Description
+      %th Created at
+  %tbody
+    - @data.each do |demo|
+      %tr
+        %td= link_to demo.author, "https://github.com/#{demo.author}", :target => "_blank"
+        %td= link_to demo.description, demo.link || "#", :target => "_blank"
+        %td= demo.created_at
+        
+
+= link_to "Download CSV", export_exports_generate_csv_index_path, :class => 'btn btn-primary'
