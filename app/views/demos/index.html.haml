@@ -1,0 +1,22 @@
+%h1 Demos
+%table{:class => "table table-striped"}
+  %thead
+    %tr
+      %th ID
+      %td Author
+      %th
+        = t("activerecord.attributes.demo.description", :default => t("activerecord.labels.description", :default => "Description"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @demos.each do |demo|
+      %tr
+        %td= demo.id
+        %td= demo.author
+        %td= link_to demo.description, demo.link || "#"
+        %td= demo.created_at
+        %td
+          = link_to "Edit", edit_demo_path(demo)
+          = link_to "Destroy", demo_path(demo), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
+
+= link_to "New", new_demo_path, :class => 'btn btn-primary'

@@ -17,12 +17,10 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand{:href => "#"} OmniDemo
+          %a.brand{:href => "/"} OmniDemo
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Link1", "/path1"
-              %li= link_to "Link2", "/path2"
-              %li= link_to "Link3", "/path3"
+              %li= link_to "Demo List", demos_path
 
     .container
       .content
@@ -40,7 +38,7 @@
                 %li= link_to "Link3", "/path3"
 
     %footer
-      %p © Company 2012
+      %p © Andy Wang 2012
 
     = javascript_include_tag "application"
     = yield :javascripts
