@@ -4,7 +4,7 @@
 
 ### DEMONSTRATIONS For Web Developers!###
 
-This application is for rails developers and itself is based on **Rails3.2**. I deployed an instance on heroku app at [http://omnidemo.heroku.com](http://omnidemo.heroku.com). So please have a look at all tricks I ever used.
+This application is for rails developers and the application itself is based on **Rails3.2**. I deployed an instance on heroku app at [http://omnidemo.heroku.com](http://omnidemo.heroku.com). So please have a look at all tricks I ever used.
 
 ### Goal ###
 Demonstrate whatever tricks or tips or techniques which were learned during web development.
@@ -14,7 +14,7 @@ Please fork this project to contribute more demos, normally, you are suggested t
 
 After I accept your demos, I will add you as a [contributor]()! 
 
-### more doc ###
+### More doc ###
 Coming soon!!
 
 Thanks!
