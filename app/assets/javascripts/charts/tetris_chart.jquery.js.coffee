@@ -1,6 +1,6 @@
 $ = jQuery
 
-$.fn.tetrisChart = (options) ->
+$.fn.tetrisChartCoffee = (options) ->
   
   defaults = 
       xOff: 15
