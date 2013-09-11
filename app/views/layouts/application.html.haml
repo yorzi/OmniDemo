@@ -1,51 +1,15 @@
-!!!
-%html{:lang => "en"}
-  %head
-    %meta{:charset => "utf-8"}
-      %title OmniDemo
-      = csrf_meta_tags
-      
-      = stylesheet_link_tag "application", :media => "all"
+!!! 5
+- html_tag :class => 'no-js' do
+  = render 'head'
 
-      %link{:href => "/assets/airplane.ico", :rel => "shortcut icon"}
-            
-  %body
-    #wrap
-      .navbar.navbar-fixed-top
-        .navbar-inner
-          .container
-            %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
-              %span.icon-bar
-              %span.icon-bar
-              %span.icon-bar
-            %a.brand{:href => "/"} OmniDemo
-            .container.nav-collapse
-              %ul.nav
-                %li= link_to "Demo List", demos_path
-              %ul.nav.pull-right
-                - if current_user
-                  %li= link_to "Logged in as #{current_user.name}"
-                  %li.divider-vertical
-                  %li= link_to "Logout", logout_path
-                - else
-                  %li= link_to "Login", login_path
-      #container-wrap
-        .container
-          .content
-            .row
-              .span9
-                = yield
-              .span1  
-              .span3
-                .well.sidebar-nav
-                  %h3 Sidebar
+  %body{ :class => "#{ controller.controller_name }" }
+    = render 'chromeframe'
+    = render 'header'
+    = render 'flashes'
 
-    #footer
-      %b #{link_to "OmniDemo", "http://github.com/yorzi/OmniDemo"}. 2012.
-      %p By #{link_to "Andy Wang", "http://github.com/yorzi"}. Follow us on #{link_to "GitHub", "http://github.com"}
-      
-    // add page view for registered demos via ajax
-    =link_to "", add_page_view_demo_path(:link => request.path), :remote => true, :method => :put, :id => "add_page_view"
+    = yield
 
-    = javascript_include_tag "application"
-    = yield :javascripts
+    = render 'footer'
+
+    -# Javascript at the bottom for fast page loading
+    = render 'javascripts'

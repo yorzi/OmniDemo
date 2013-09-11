@@ -12,7 +12,7 @@ gem 'rails', '4.0.0'
 gem 'rails_12factor'
 
 gem 'pg'
-gem 'twitter-bootstrap-rails'
+# gem 'twitter-bootstrap-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -42,6 +42,8 @@ gem 'rails_admin'
 gem 'grape'
 
 gem "devise"
+
+gem 'simple_form'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'

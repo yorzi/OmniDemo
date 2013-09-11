@@ -12,7 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require h5bp
 //= require highcharts
 //= require twitter/bootstrap
 //= require charts/tetris_bar
-//= require_tree .
+
